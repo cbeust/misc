@@ -23,11 +23,7 @@ public class MustacheChecker {
 
     private void runOnDirectory(File dir) throws IOException {
         for (File f : dir.listFiles()) {
-            if (f.isDirectory()) {
-                runOnDirectory(f);
-            } else {
-                runOnFile(f);
-            }
+            run(f);
         }
     }
 
@@ -43,7 +39,7 @@ public class MustacheChecker {
         while (line != null) {
             for (int i = 0; i < line.length(); i++) {
                 if (line.contains("<!--")) inComment = true;
-                else if (line.contains("-->")) inComment = false;
+                if (line.contains("-->")) inComment = false;
 
                 if (line.charAt(i) == '{') {
                     if (i + 1 < line.length() && line.charAt(i + 1) == '{') {
