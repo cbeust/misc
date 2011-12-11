@@ -46,7 +46,7 @@ function rewriteSection(section, counters) {
 }
 
 function getAttribute(obj, attribute, def) {
-	var result = obj.attributes[attribue];
+	var result = obj.attributes[attribute];
 	return result ? result.nodeValue : def;
 }
 
