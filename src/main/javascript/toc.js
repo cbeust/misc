@@ -22,17 +22,19 @@
 
 function countersToHeading(counters) {
     var result = "";
-    for (var i = 0; i < counters.length; i++) {
-	if (i > 0) result = result + ".";
-	result = result + counters[i];
+    for ( var i = 0; i < counters.length; i++) {
+        if (i > 0) {
+            result = result + ".";
+        }
+        result = result + counters[i];
     }
     return result;
 }
 
 function indentSection(count) {
     var result = "";
-    for (var i = 0; i < count; i++) {
-	result += "&nbsp;&nbsp;";
+    for ( var i = 0; i < count; i++) {
+        result += "&nbsp;&nbsp;";
     }
     return result;
 }
@@ -43,49 +45,55 @@ function rewriteSection(section, counters) {
     return result;
 }
 
+function getAttribute(obj, attribute, def) {
+	var result = obj.attributes[attribue];
+	return result ? result.nodeValue : def;
+}
+
 function generateToc() {
     var sections = document.getElementsByTagName("a");
 
     var toc = "";
     var counters = new Array();
-    for (i = 0; i < sections.length; i++)
-    {
-	var section = sections[i];
-	if (section.className == "section") {
-	    var nameNode = section.attributes["name"];
-	    var name = nameNode ? nameNode.nodeValue : i;
-	    var indentNode = section.attributes["indent"];
-            var indent = indentNode ? indentNode.nodeValue : ".";
+    for (i = 0; i < sections.length; i++) {
+        var section = sections[i];
+        if (section.className == "section") {
+            var name = getAttribute(section, "name", i);
+            var indent = getAttribute(section, "indent", ".");
             var currentCounter = 0;
             var ind = indent.length;
-	    if (ind < counters.length) {
-		var p = ind;
-		while (p++ <= counters.length) {
+
+            if (ind < counters.length) {
+            	// Unindenting (6.2.3 -> 7.1)
+                var p = ind;
+                while (p++ <= counters.length) {
                     counters.pop();
-		}
-	    }
-            if (counters[ind - 1]) {
-		var n = counters.pop();
-		counters.push(n + 1);
-            } else {
-		counters.push(1);
+                }
             }
-            toc = toc
-		+ indentSection(ind) + '<a class="table-of-contents" href=#' + name + '>'
-		+ rewriteSection(section, counters)
-		+ "</a><br>";
-	    section.innerHTML = rewriteSection(section, counters);
-	}
+
+            if (counters[ind - 1]) {
+            	// Incrementing an existing counter (3.2 -> 3.3)
+                var n = counters.pop();
+                counters.push(n + 1);
+            } else {
+            	// New counter (2 -> 2.1)
+                counters.push(1);
+            }
+
+            toc = toc + indentSection(ind)
+                    + '<a class="table-of-contents" href=#' + name + '>'
+                    + rewriteSection(section, counters) + "</a><br>";
+            section.innerHTML = rewriteSection(section, counters);
+        }
     }
-    
+
     var tocId = "table-of-contents";
     var tocTag = document.getElementById(tocId);
-    
+
     if (tocTag) {
-	tocTag.innerHTML = toc;
+        tocTag.innerHTML = toc;
     } else {
-	alert("Couldn't find an id " + tocId);
+        alert("Couldn't find an id " + tocId);
     }
 
 }
-
