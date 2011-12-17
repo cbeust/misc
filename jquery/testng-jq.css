@@ -1,0 +1,29 @@
+
+.failure .test-name {
+    background: #ff0000;
+}
+
+.skip .test-name {
+    background: #888800;;
+}
+
+.success .test-name {
+    background: #00cc00;
+}
+
+.exception {
+    font-family: monospace;
+}
+
+h3 {
+    font-weight: normal;  
+    border-style: solid;
+    border-width: 1px 0px 0px 0px;
+    text-indent: 20px;
+}
+
+h4 {
+    font-weight: normal;  
+    text-indent: 40px;
+    line-height: 0.2;
+}

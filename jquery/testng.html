@@ -1,0 +1,123 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html> <head>
+<title></title>
+
+    <link type="text/css" href="testng-jq.css" rel="stylesheet" />  
+<script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+
+    <script type="text/javascript">
+      $(function(){
+          // Hide all the test contents
+          $('.test-content').hide();
+
+          // But expand the failures
+          $('.failure .test-content').show()
+
+          // Clicking on a test toggles its content
+          $('a .test-name').click(function() {
+              $(this).parent().parent().next().toggle();
+          });
+});
+</script>
+</head>
+
+<body>
+
+<div id="suites">
+  <h2>
+  <span class="suite-name">Suite 1</span>
+  </h2>
+
+  <div class="test failure">
+  <h3>
+  <a href="#"><span class="test-name">AfterClassCalledAtEnd (3/0/0)</span></a>
+  </h3>
+
+  <div class="test-content">
+  <h4>
+  <span class="method-name">test1</span>
+  <span class="method-time">0 ms</span>
+  <span class="class-name">test.sample.AfterClassCalledAtEnd</span>
+  </h4>
+
+  <h4>
+  <span class="method-name">test2</span>
+  <span class="method-time">0 ms</span>
+  <span class="class-name">test.sample.AfterClassCalledAtEnd</span>
+  </h4>
+
+  <h4>
+  <span class="method-name">test3</span>
+  <span class="method-time">0 ms</span>
+  <span class="class-name">test.sample.AfterClassCalledAtEnd</span>
+  </h4>
+  </div> <!-- test-content -->
+  </div> <!-- test -->
+
+  <div class="test failure">
+  <h3>
+  <a href="#"><span class="test-name">Ant-ClassFileResolution (3/0/0)</span></a>
+  </h3>
+
+  <div class="test-content">
+  <h4>
+  <span class="method-name">testDOSPathResolution</span>
+  <span class="class-name">test.ant.TestCommandLineArgs</span>
+  <span class="method-time">0 ms</span>
+  </h4>
+
+  <h4>
+  <span class="method-name">testPathResolution</span>
+  <span class="class-name">test.ant.TestCommandLineArgs</span>
+  <span class="method-time">0 ms</span>
+  </h4>
+
+  <h4>
+  <span class="method-name">testUnixPathResolution</span>
+  <span class="class-name">test.ant.TestCommandLineArgs</span>
+  <span class="method-time">0 ms</span>
+  </h4>
+  </div> <!-- test-content -->
+  </div> <!-- test -->
+
+  <div class="test skip">
+  <h3>
+   <a href="#"><span class="test-name">Asserts (18/0/0)</span></a>
+  </h3>
+
+  <div class="test-content">
+  <h4>
+  <span class="method-name">arraysFailures_1</span>
+  <span class="class-name">test.asserttests.AssertTest</span>
+  </h4>
+  <span class="exception"><pre>
+java.lang.AssertionError:  expected:<[J@68376cc3> but was:<[I@ec5aba9>
+	at test.asserttests.AssertTest.arraysFailures_1(AssertTest.java:44)
+... Removed 28 stack frames
+Click to show all stack frames
+</pre>
+  </span>
+  </div> <!-- test-content -->
+  </div> <!-- test -->
+
+  <div class="test success">
+  <h3>
+  <span class="test-name">Basic (3/0/0)</span>
+  </h3>
+  <div class="test-content">
+  </div> <!-- test-content -->
+  </div> <!-- test -->
+
+  <div class="test success">
+  <h3>
+  <span class="test-name">BeforeGroups-AfterGroups-1 (24/0/0)</span>
+  </h3>
+  <div class="test-content">
+  </div> <!-- test-content -->
+  </div> <!-- test -->
+
+
+</div>
+
+</body> </html>
