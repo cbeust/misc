@@ -4,7 +4,9 @@
 
     <link type="text/css" href="testng-jq.css" rel="stylesheet" />  
 <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+<!--
 <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+-->
 
     <script type="text/javascript">
       $(function(){
@@ -34,24 +36,24 @@
   <a href="#"><span class="test-name">AfterClassCalledAtEnd (3/0/0)</span></a>
   </h3>
 
-  <div class="test-content">
-  <h4>
-  <span class="method-name">test1</span>
-  <span class="method-time">0 ms</span>
-  <span class="class-name">test.sample.AfterClassCalledAtEnd</span>
-  </h4>
+  <div class="class-name">test.sample.AfterClassCalledAtEnd
+    <div class="method">
+      <span class="method-name">test1</span>
+      <span class="method-time">0 ms</span>
+    </div>
+    <div class="method">
+      <span class="method-name">test2</span>
+      <span class="method-time">0 ms</span>
+    </div>
+  </div> <!-- class-name -->
 
-  <h4>
-  <span class="method-name">test2</span>
-  <span class="method-time">0 ms</span>
-  <span class="class-name">test.sample.AfterClassCalledAtEnd</span>
-  </h4>
-
-  <h4>
-  <span class="method-name">test3</span>
-  <span class="method-time">0 ms</span>
-  <span class="class-name">test.sample.AfterClassCalledAtEnd</span>
-  </h4>
+  <div class="class-name">test.sample.AfterClassCalledAtEnd
+    <div class="method">
+      <span class="method-name">test3</span>
+      <span class="method-time">0 ms</span>
+    </div>
+  </div> <!-- class-name -->
+  
   </div> <!-- test-content -->
   </div> <!-- test -->
 
@@ -61,17 +63,15 @@
   </h3>
 
   <div class="test-content">
-  <h4>
-  <span class="method-name">testDOSPathResolution</span>
-  <span class="class-name">test.ant.TestCommandLineArgs</span>
-  <span class="method-time">0 ms</span>
-  </h4>
+    <div class="class-name">test.ant.TestCommandLineArgs</div>
+      <span class="method-name">testDOSPathResolution</span>
+      <span class="method-time">0 ms</span>
+    </div>
+  </div> <!-- class-name -->
 
-  <h4>
-  <span class="method-name">testPathResolution</span>
-  <span class="class-name">test.ant.TestCommandLineArgs</span>
-  <span class="method-time">0 ms</span>
-  </h4>
+  <div class="class-name">test.ant.TestCommandLineArgs</div>
+    <span class="method-name">testPathResolution</span>
+  </div>
 
   <h4>
   <span class="method-name">testUnixPathResolution</span>

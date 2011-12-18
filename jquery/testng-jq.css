@@ -1,14 +1,18 @@
 
 .failure .test-name {
-    background: #ff0000;
+    background: #F44;
 }
 
 .skip .test-name {
-    background: #888800;;
+    background: #FA0;
 }
 
 .success .test-name {
-    background: #00cc00;
+    background: #4A4;
+}
+
+.class-name {
+    background: #CCC;
 }
 
 .exception {
