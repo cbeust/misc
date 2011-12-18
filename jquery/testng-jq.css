@@ -28,6 +28,14 @@ h3 {
 
 h4 {
     font-weight: normal;  
-    text-indent: 40px;
     line-height: 0.2;
+    text-indent: 40px;
+}
+
+.class-name {
+    text-indent: 60px;
+}
+
+.method-name {
+    text-indent: 80px;
 }
