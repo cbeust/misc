@@ -105,28 +105,23 @@ a:hover {
     font-family: monospace;
 }
 
-.red-triangle {
-    display: block;
-    height: 0;
-    width: 0;
-    border-bottom: 1em solid #f00;
-    border-left: 1em solid transparent;   
+.parameters {
+    font-size: 14px;
+    font-family: monospace;
 }
 
-.blue-circle {
-    display: inline;
-    height: 5px;
-    width: 5px;
-    background-color: #f00;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -khtml-border-radius: 5px;
-    border-radius: 5px;
-    }
+.method-time {
+    padding-left: 50px;
+}
 
-.green-square {
-    background-color: #0f0;
-    display: inline;
-    height: 10px;
-    width: 10px;
+.stack-trace {
+    whitespace: pre;
+    font-family: monotype;
+    font-size: 12px;
+    margin-top: 0px;
+    margin-left: 20px;
+}
+
+img .down {
+    src: url("down.png");
 }

@@ -11,14 +11,23 @@
     <script type="text/javascript">
       $(function(){
           // Hide all the test contents
-          $('.test-content').hide();
+//          $('.test-content').hide();
 
           // But expand the failures
           $('.failed .test-content').show()
 
-          // Clicking on a test toggles its content
-          $('a .test-name').click(function() {
-              $(this).parent().next().toggle();
+          // Clicking on the arrow toggles its content
+          $('a.expand').click(function() {
+              var img = $(this).find('img');
+              var src = img.attr('src');
+              if (src == "down.png") {
+                  img.attr('src', 'up.png');
+              } else {
+                  img.attr('src', 'down.png');
+              }
+              $(this).removeAttr('class');
+              $(this).attr('class', 'up');
+              $(this).next().toggle();
               return false;
           });
 });
