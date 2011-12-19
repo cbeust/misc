@@ -1,3 +1,11 @@
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
 .result-banner {
     font-size: 22px;
     font-weight: bold;
@@ -8,6 +16,10 @@
 
 .result-banner.failed {
     background-color: #F44;
+}
+
+.status-failure {
+    background-color: #00cc00;
 }
 
 .result-banner.passed {
@@ -50,6 +62,24 @@
     margin-top: 5px;
 }
 
+.class-header {
+    padding: 5px;
+    background-color: #9FB4D9; //afeeee;
+    border-style: solid;
+    border-width: 1px;
+    border-top-left-radius: 10px 5px;
+    border-top-right-radius: 10px;
+}
+
+.class-content {
+    background-color: #DEE8FC; //d0ffff;
+    border-width: 0px 1px 1px 1px;
+    border-style: solid;
+    border-bottom-right-radius: 10px 5px;
+    border-bottom-left-radius: 10px 5px;
+    margin-bottom: 10px;
+}
+
 .class-name {
     font-size: 18px;
     font-family: monospace;
@@ -57,8 +87,9 @@
 
 .method-content {
     padding-left: 20px;
-    border-style: solid;
-    border-width: 0px 0px 0px 1px;
+    margin-left: 10px;
+#    border-style: solid;
+#    border-width: 0px 0px 0px 1px;
 }
 
 .success .test-name {
@@ -72,4 +103,30 @@
 .method-name {
     font-size: 14px;
     font-family: monospace;
+}
+
+.red-triangle {
+    display: block;
+    height: 0;
+    width: 0;
+    border-bottom: 1em solid #f00;
+    border-left: 1em solid transparent;   
+}
+
+.blue-circle {
+    display: inline;
+    height: 5px;
+    width: 5px;
+    background-color: #f00;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    border-radius: 5px;
+    }
+
+.green-square {
+    background-color: #0f0;
+    display: inline;
+    height: 10px;
+    width: 10px;
 }
