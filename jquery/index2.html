@@ -27,7 +27,7 @@
               }
               $(this).removeAttr('class');
               $(this).attr('class', 'up');
-              $(this).next().toggle();
+              $(this).parent().next().toggle();
               return false;
           });
 });
@@ -37,454 +37,467 @@
 <body>
   <div id="suites">
     <div class="suite">
-      <span class="suite-name">YAML</span>
-      <div class="suite-content">
-        <div class="result-banner failed">Failed tests</div>
-    <div class="test failed">
-      <span class="test-name">unittest</span>
-      <a href="#" class="expand">
-        <img src="up.png"/>
-      </a>
-      <div class="test-content">
-        <div class="class">
-          <div class="class-header">
-            <img src="failed.png"/>
-            <span class="class-name">test.tmp.A</span>
-          </div>
-          <div class="class-content">
-            <div class="method">
-              <div class="method-content">
-                <span class="method-name">f</span>
-                <span class="parameters">(include)</span>
-                <div class="stack-trace">test.tmp.A.f(A.java:50)<br>sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br>sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)<br>sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)<br>java.lang.reflect.Method.invoke(Method.java:597)<br>org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)<br>org.testng.internal.Invoker.invokeMethod(Invoker.java:691)<br>org.testng.internal.Invoker.invokeTestMethod(Invoker.java:883)<br>org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1207)<br>org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:128)<br>org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)<br>org.testng.TestRunner.privateRun(TestRunner.java:758)<br>org.testng.TestRunner.run(TestRunner.java:613)<br>org.testng.SuiteRunner.runTest(SuiteRunner.java:334)<br>org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)<br>org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)<br>org.testng.SuiteRunner.run(SuiteRunner.java:240)<br>org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)<br>org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:87)<br>org.testng.TestNG.runSuitesSequentially(TestNG.java:1144)<br>org.testng.TestNG.runSuitesLocally(TestNG.java:1069)<br>org.testng.TestNG.run(TestNG.java:981)<br>org.testng.TestNG.privateMain(TestNG.java:1289)<br>org.testng.TestNG.main(TestNG.java:1253)<br>
+      <div class="suite-header">
+        <span class="suite-name">YAML</span>
+        <div class="stats">
+          <ul>
+            <li>
+              <span class="method-stats">40 methods, 1 failed, 0 skipped, 39 passed</span>
+            </li>
+            <li>
+              <span>3 tests </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    <div class="suite-content">
+      <div class="result-banner failed">Failed tests</div>
+      <div class="test failed">
+        <div class="test-name">
+unittest          <a href="#" class="expand">
+            <img src="up.png"/>
+          </a>
+        </div>
+        <div class="test-content">
+          <div class="class">
+            <div class="class-header">
+              <img src="failed.png"/>
+              <span class="class-name">test.tmp.A</span>
+            </div>
+            <div class="class-content">
+              <div class="method">
+                <div class="method-content">
+                  <span class="method-name">f</span>
+                  <span class="parameters">(include)</span>
+                  <div class="stack-trace">test.tmp.A.f(A.java:50)<br>sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br>sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)<br>sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)<br>java.lang.reflect.Method.invoke(Method.java:597)<br>org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)<br>org.testng.internal.Invoker.invokeMethod(Invoker.java:691)<br>org.testng.internal.Invoker.invokeTestMethod(Invoker.java:883)<br>org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1207)<br>org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:128)<br>org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)<br>org.testng.TestRunner.privateRun(TestRunner.java:758)<br>org.testng.TestRunner.run(TestRunner.java:613)<br>org.testng.SuiteRunner.runTest(SuiteRunner.java:334)<br>org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)<br>org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)<br>org.testng.SuiteRunner.run(SuiteRunner.java:240)<br>org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)<br>org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:87)<br>org.testng.TestNG.runSuitesSequentially(TestNG.java:1144)<br>org.testng.TestNG.runSuitesLocally(TestNG.java:1069)<br>org.testng.TestNG.run(TestNG.java:981)<br>org.testng.TestNG.privateMain(TestNG.java:1289)<br>org.testng.TestNG.main(TestNG.java:1253)<br>
 </div>
-                <span class="method-time"> 1 ms</span>
+                  <span class="method-time"> 0 ms</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-        <div class="result-banner skipped">Skipped tests</div>
-        <div class="result-banner passed">Passed tests</div>
-    <div class="test passed">
-      <span class="test-name">DataProvider</span>
-      <a href="#" class="expand">
-        <img src="up.png"/>
-      </a>
-      <div class="test-content">
-        <div class="class">
-          <div class="class-header">
-            <img src="passed.png"/>
-            <span class="class-name">test.dataprovider.InstanceDataProviderSampleTest</span>
-          </div>
-          <div class="class-content">
-            <div class="method">
-              <div class="method-content">
-                <span class="method-name">f</span>
-                <span class="parameters">(1839367010)</span>
-                <span class="method-time"> 0 ms</span>
-              </div>
-            </div>
-            <div class="method">
-              <div class="method-content">
-                <span class="method-name">f</span>
-                <span class="parameters">(1333933549)</span>
-                <span class="method-time"> 1 ms</span>
-              </div>
-            </div>
-          </div>
+      <div class="result-banner skipped">Skipped tests</div>
+      <div class="result-banner passed">Passed tests</div>
+      <div class="test passed">
+        <div class="test-name">
+DataProvider          <a href="#" class="expand">
+            <img src="up.png"/>
+          </a>
         </div>
-        <div class="class">
-          <div class="class-header">
-            <img src="passed.png"/>
-            <span class="class-name">test.dataprovider.InheritedDataProviderTest</span>
-          </div>
-          <div class="class-content">
-            <div class="method">
-              <div class="method-content">
-                <span class="method-name">f</span>
-                <span class="parameters">(a)</span>
-                <span class="method-time"> 1 ms</span>
+        <div class="test-content">
+          <div class="class">
+            <div class="class-header">
+              <img src="passed.png"/>
+              <span class="class-name">test.dataprovider.TestNG411Test</span>
+            </div>
+            <div class="class-content">
+              <div class="method">
+                <div class="method-content">
+                  <span class="method-name">verify</span>
+                  <span class="method-time"> 44 ms</span>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="class">
-          <div class="class-header">
-            <img src="passed.png"/>
-            <span class="class-name">test.dataprovider.TestNG411Test</span>
-          </div>
-          <div class="class-content">
-            <div class="method">
-              <div class="method-content">
-                <span class="method-name">verify</span>
-                <span class="method-time"> 90 ms</span>
+          <div class="class">
+            <div class="class-header">
+              <img src="passed.png"/>
+              <span class="class-name">test.dataprovider.TestInstanceTest</span>
+            </div>
+            <div class="class-content">
+              <div class="method">
+                <div class="method-content">
+                  <span class="method-name">f</span>
+                  <span class="parameters">(43)</span>
+                  <span class="method-time"> 0 ms</span>
+                </div>
+              </div>
+              <div class="method">
+                <div class="method-content">
+                  <span class="method-name">f</span>
+                  <span class="parameters">(43)</span>
+                  <span class="method-time"> 0 ms</span>
+                </div>
+              </div>
+              <div class="method">
+                <div class="method-content">
+                  <span class="method-name">f</span>
+                  <span class="parameters">(42)</span>
+                  <span class="method-time"> 0 ms</span>
+                </div>
+              </div>
+              <div class="method">
+                <div class="method-content">
+                  <span class="method-name">f</span>
+                  <span class="parameters">(42)</span>
+                  <span class="method-time"> 0 ms</span>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="class">
-          <div class="class-header">
-            <img src="passed.png"/>
-            <span class="class-name">test.dataprovider.FailedDataProviderTest</span>
-          </div>
-          <div class="class-content">
-            <div class="method">
-              <div class="method-content">
-                <span class="method-name">failedDataProviderShouldCauseSkip</span>
-                <span class="method-time"> 270 ms</span>
-              </div>
+          <div class="class">
+            <div class="class-header">
+              <img src="passed.png"/>
+              <span class="class-name">test.dataprovider.FailedDataProviderTest</span>
             </div>
-            <div class="method">
-              <div class="method-content">
-                <span class="method-name">allMethodsShouldBeInvoked</span>
-                <span class="method-time"> 1290 ms</span>
+            <div class="class-content">
+              <div class="method">
+                <div class="method-content">
+                  <span class="method-name">failedDataProviderShouldCauseSkip</span>
+                  <span class="method-time"> 56 ms</span>
+                </div>
               </div>
-            </div>
-          </div>
-        </div>
-        <div class="class">
-          <div class="class-header">
-            <img src="passed.png"/>
-            <span class="class-name">test.dataprovider.FailingIterableDataProviderTest</span>
-          </div>
-          <div class="class-content">
-            <div class="method">
-              <div class="method-content">
-                <span class="method-name">failingDataProvider</span>
-                <span class="method-time"> 15 ms</span>
+              <div class="method">
+                <div class="method-content">
+                  <span class="method-name">allMethodsShouldBeInvoked</span>
+                  <span class="method-time"> 80 ms</span>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="class">
-          <div class="class-header">
-            <img src="passed.png"/>
-            <span class="class-name">test.dataprovider.BooleanTest</span>
-          </div>
-          <div class="class-content">
-            <div class="method">
-              <div class="method-content">
-                <span class="method-name">doStuff</span>
-                <span class="parameters">(true)</span>
-                <span class="method-time"> 0 ms</span>
-              </div>
+          <div class="class">
+            <div class="class-header">
+              <img src="passed.png"/>
+              <span class="class-name">test.dataprovider.VarArgsDataProviderTest</span>
             </div>
-            <div class="method">
-              <div class="method-content">
-                <span class="method-name">verify</span>
-                <span class="method-time"> 0 ms</span>
-              </div>
-            </div>
-            <div class="method">
-              <div class="method-content">
-                <span class="method-name">doStuff</span>
-                <span class="parameters">(false)</span>
-                <span class="method-time"> 0 ms</span>
+            <div class="class-content">
+              <div class="method">
+                <div class="method-content">
+                  <span class="method-name">testWithTwoEntriesInTestToolWindow</span>
+                  <span class="parameters">([Ljava.lang.String;@7a7c3885)</span>
+                  <span class="method-time"> 0 ms</span>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="class">
-          <div class="class-header">
-            <img src="passed.png"/>
-            <span class="class-name">test.dataprovider.Sample1Test</span>
-          </div>
-          <div class="class-content">
-            <div class="method">
-              <div class="method-content">
-                <span class="method-name">verifyNames</span>
-                <span class="parameters">(Anne Marie, 37)</span>
-                <span class="method-time"> 0 ms</span>
-              </div>
+          <div class="class">
+            <div class="class-header">
+              <img src="passed.png"/>
+              <span class="class-name">test.dataprovider.ClassTest</span>
             </div>
-            <div class="method">
-              <div class="method-content">
-                <span class="method-name">verifyNames</span>
-                <span class="parameters">(Cedric, 36)</span>
-                <span class="method-time"> 21 ms</span>
-              </div>
-            </div>
-            <div class="method">
-              <div class="method-content">
-                <span class="method-name">verifyCount</span>
-                <span class="method-time"> 0 ms</span>
+            <div class="class-content">
+              <div class="method">
+                <div class="method-content">
+                  <span class="method-name">includeMethodsOnly</span>
+                  <span class="method-time"> 8 ms</span>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="class">
-          <div class="class-header">
-            <img src="passed.png"/>
-            <span class="class-name">test.dataprovider.VarArgsDataProviderTest</span>
-          </div>
-          <div class="class-content">
-            <div class="method">
-              <div class="method-content">
-                <span class="method-name">testWithTwoEntriesInTestToolWindow</span>
-                <span class="parameters">([Ljava.lang.String;@6ab30913)</span>
-                <span class="method-time"> 0 ms</span>
+          <div class="class">
+            <div class="class-header">
+              <img src="passed.png"/>
+              <span class="class-name">test.dataprovider.MethodTest</span>
+            </div>
+            <div class="class-content">
+              <div class="method">
+                <div class="method-content">
+                  <span class="method-name">test1</span>
+                  <span class="parameters">(Cedric)</span>
+                  <span class="method-time"> 0 ms</span>
+                </div>
+              </div>
+              <div class="method">
+                <div class="method-content">
+                  <span class="method-name">test2</span>
+                  <span class="parameters">(Cedric)</span>
+                  <span class="method-time"> 0 ms</span>
+                </div>
+              </div>
+              <div class="method">
+                <div class="method-content">
+                  <span class="method-name">test1</span>
+                  <span class="parameters">(Alois)</span>
+                  <span class="method-time"> 0 ms</span>
+                </div>
+              </div>
+              <div class="method">
+                <div class="method-content">
+                  <span class="method-name">test3</span>
+                  <span class="parameters">(Cedric)</span>
+                  <span class="method-time"> 0 ms</span>
+                </div>
+              </div>
+              <div class="method">
+                <div class="method-content">
+                  <span class="method-name">multipleTestMethods</span>
+                  <span class="method-time"> 0 ms</span>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="class">
-          <div class="class-header">
-            <img src="passed.png"/>
-            <span class="class-name">test.dataprovider.StaticDataProviderSampleTest</span>
-          </div>
-          <div class="class-content">
-            <div class="method">
-              <div class="method-content">
-                <span class="method-name">verifyStatic</span>
-                <span class="parameters">(Cedric)</span>
-                <span class="method-time"> 0 ms</span>
+          <div class="class">
+            <div class="class-header">
+              <img src="passed.png"/>
+              <span class="class-name">test.dataprovider.UnnamedDataProviderTest</span>
+            </div>
+            <div class="class-content">
+              <div class="method">
+                <div class="method-content">
+                  <span class="method-name">doStuff</span>
+                  <span class="parameters">(true)</span>
+                  <span class="method-time"> 0 ms</span>
+                </div>
+              </div>
+              <div class="method">
+                <div class="method-content">
+                  <span class="method-name">doStuff</span>
+                  <span class="parameters">(false)</span>
+                  <span class="method-time"> 0 ms</span>
+                </div>
+              </div>
+              <div class="method">
+                <div class="method-content">
+                  <span class="method-name">verify</span>
+                  <span class="method-time"> 0 ms</span>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="class">
-          <div class="class-header">
-            <img src="passed.png"/>
-            <span class="class-name">test.dataprovider.ClassTest</span>
-          </div>
-          <div class="class-content">
-            <div class="method">
-              <div class="method-content">
-                <span class="method-name">includeMethodsOnly</span>
-                <span class="method-time"> 42 ms</span>
+          <div class="class">
+            <div class="class-header">
+              <img src="passed.png"/>
+              <span class="class-name">test.dataprovider.Sample1Test</span>
+            </div>
+            <div class="class-content">
+              <div class="method">
+                <div class="method-content">
+                  <span class="method-name">verifyCount</span>
+                  <span class="method-time"> 0 ms</span>
+                </div>
+              </div>
+              <div class="method">
+                <div class="method-content">
+                  <span class="method-name">verifyNames</span>
+                  <span class="parameters">(Cedric, 36)</span>
+                  <span class="method-time"> 0 ms</span>
+                </div>
+              </div>
+              <div class="method">
+                <div class="method-content">
+                  <span class="method-name">verifyNames</span>
+                  <span class="parameters">(Anne Marie, 37)</span>
+                  <span class="method-time"> 0 ms</span>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="class">
-          <div class="class-header">
-            <img src="passed.png"/>
-            <span class="class-name">test.dataprovider.ConfigurationAndDataProvidersTest</span>
-          </div>
-          <div class="class-content">
-            <div class="method">
-              <div class="method-content">
-                <span class="method-name">verifyNames</span>
-                <span class="parameters">(Test)</span>
-                <span class="method-time"> 0 ms</span>
+          <div class="class">
+            <div class="class-header">
+              <img src="passed.png"/>
+              <span class="class-name">test.dataprovider.InstanceDataProviderSampleTest</span>
+            </div>
+            <div class="class-content">
+              <div class="method">
+                <div class="method-content">
+                  <span class="method-name">f</span>
+                  <span class="parameters">(1729331687)</span>
+                  <span class="method-time"> 0 ms</span>
+                </div>
+              </div>
+              <div class="method">
+                <div class="method-content">
+                  <span class="method-name">f</span>
+                  <span class="parameters">(223833712)</span>
+                  <span class="method-time"> 0 ms</span>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="class">
-          <div class="class-header">
-            <img src="passed.png"/>
-            <span class="class-name">test.dataprovider.FailingDataProviderTest</span>
-          </div>
-          <div class="class-content">
-            <div class="method">
-              <div class="method-content">
-                <span class="method-name">failingDataProvider</span>
-                <span class="method-time"> 20 ms</span>
-              </div>
+          <div class="class">
+            <div class="class-header">
+              <img src="passed.png"/>
+              <span class="class-name">test.dataprovider.InheritedDataProviderTest</span>
             </div>
-            <div class="method">
-              <div class="method-content">
-                <span class="method-name">duplicateDataProviders</span>
-                <span class="method-time"> 128 ms</span>
+            <div class="class-content">
+              <div class="method">
+                <div class="method-content">
+                  <span class="method-name">f</span>
+                  <span class="parameters">(a)</span>
+                  <span class="method-time"> 0 ms</span>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="class">
-          <div class="class-header">
-            <img src="passed.png"/>
-            <span class="class-name">test.dataprovider.MethodTest</span>
-          </div>
-          <div class="class-content">
-            <div class="method">
-              <div class="method-content">
-                <span class="method-name">multipleTestMethods</span>
-                <span class="method-time"> 0 ms</span>
-              </div>
+          <div class="class">
+            <div class="class-header">
+              <img src="passed.png"/>
+              <span class="class-name">test.dataprovider.ConfigurationAndDataProvidersTest</span>
             </div>
-            <div class="method">
-              <div class="method-content">
-                <span class="method-name">test2</span>
-                <span class="parameters">(Cedric)</span>
-                <span class="method-time"> 0 ms</span>
-              </div>
-            </div>
-            <div class="method">
-              <div class="method-content">
-                <span class="method-name">test1</span>
-                <span class="parameters">(Cedric)</span>
-                <span class="method-time"> 0 ms</span>
-              </div>
-            </div>
-            <div class="method">
-              <div class="method-content">
-                <span class="method-name">test1</span>
-                <span class="parameters">(Alois)</span>
-                <span class="method-time"> 1 ms</span>
-              </div>
-            </div>
-            <div class="method">
-              <div class="method-content">
-                <span class="method-name">test3</span>
-                <span class="parameters">(Cedric)</span>
-                <span class="method-time"> 0 ms</span>
+            <div class="class-content">
+              <div class="method">
+                <div class="method-content">
+                  <span class="method-name">verifyNames</span>
+                  <span class="parameters">(Test)</span>
+                  <span class="method-time"> 0 ms</span>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="class">
-          <div class="class-header">
-            <img src="passed.png"/>
-            <span class="class-name">test.dataprovider.TestInstanceTest</span>
-          </div>
-          <div class="class-content">
-            <div class="method">
-              <div class="method-content">
-                <span class="method-name">f</span>
-                <span class="parameters">(42)</span>
-                <span class="method-time"> 0 ms</span>
-              </div>
+          <div class="class">
+            <div class="class-header">
+              <img src="passed.png"/>
+              <span class="class-name">test.dataprovider.BooleanTest</span>
             </div>
-            <div class="method">
-              <div class="method-content">
-                <span class="method-name">f</span>
-                <span class="parameters">(43)</span>
-                <span class="method-time"> 0 ms</span>
+            <div class="class-content">
+              <div class="method">
+                <div class="method-content">
+                  <span class="method-name">doStuff</span>
+                  <span class="parameters">(true)</span>
+                  <span class="method-time"> 0 ms</span>
+                </div>
               </div>
-            </div>
-            <div class="method">
-              <div class="method-content">
-                <span class="method-name">f</span>
-                <span class="parameters">(43)</span>
-                <span class="method-time"> 0 ms</span>
+              <div class="method">
+                <div class="method-content">
+                  <span class="method-name">doStuff</span>
+                  <span class="parameters">(false)</span>
+                  <span class="method-time"> 0 ms</span>
+                </div>
               </div>
-            </div>
-            <div class="method">
-              <div class="method-content">
-                <span class="method-name">f</span>
-                <span class="parameters">(42)</span>
-                <span class="method-time"> 0 ms</span>
+              <div class="method">
+                <div class="method-content">
+                  <span class="method-name">verify</span>
+                  <span class="method-time"> 0 ms</span>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="class">
-          <div class="class-header">
-            <img src="passed.png"/>
-            <span class="class-name">test.dataprovider.TestContextTest</span>
-          </div>
-          <div class="class-content">
-            <div class="method">
-              <div class="method-content">
-                <span class="method-name">verifyTen</span>
-                <span class="method-time"> 78 ms</span>
-              </div>
+          <div class="class">
+            <div class="class-header">
+              <img src="passed.png"/>
+              <span class="class-name">test.dataprovider.DataProviderAsTest</span>
             </div>
-            <div class="method">
-              <div class="method-content">
-                <span class="method-name">verifySix</span>
-                <span class="method-time"> 877 ms</span>
-              </div>
-            </div>
-            <div class="method">
-              <div class="method-content">
-                <span class="method-name">verifyFive</span>
-                <span class="method-time"> 596 ms</span>
+            <div class="class-content">
+              <div class="method">
+                <div class="method-content">
+                  <span class="method-name">f</span>
+                  <span class="method-time"> 0 ms</span>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="class">
-          <div class="class-header">
-            <img src="passed.png"/>
-            <span class="class-name">test.dataprovider.UnnamedDataProviderTest</span>
-          </div>
-          <div class="class-content">
-            <div class="method">
-              <div class="method-content">
-                <span class="method-name">doStuff</span>
-                <span class="parameters">(true)</span>
-                <span class="method-time"> 1 ms</span>
-              </div>
+          <div class="class">
+            <div class="class-header">
+              <img src="passed.png"/>
+              <span class="class-name">test.dataprovider.StaticDataProviderSampleTest</span>
             </div>
-            <div class="method">
-              <div class="method-content">
-                <span class="method-name">verify</span>
-                <span class="method-time"> 0 ms</span>
-              </div>
-            </div>
-            <div class="method">
-              <div class="method-content">
-                <span class="method-name">doStuff</span>
-                <span class="parameters">(false)</span>
-                <span class="method-time"> 0 ms</span>
+            <div class="class-content">
+              <div class="method">
+                <div class="method-content">
+                  <span class="method-name">verifyStatic</span>
+                  <span class="parameters">(Cedric)</span>
+                  <span class="method-time"> 0 ms</span>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="class">
-          <div class="class-header">
-            <img src="passed.png"/>
-            <span class="class-name">test.dataprovider.DataProviderAsTest</span>
-          </div>
-          <div class="class-content">
-            <div class="method">
-              <div class="method-content">
-                <span class="method-name">f</span>
-                <span class="method-time"> 0 ms</span>
+          <div class="class">
+            <div class="class-header">
+              <img src="passed.png"/>
+              <span class="class-name">test.dataprovider.FailingDataProviderTest</span>
+            </div>
+            <div class="class-content">
+              <div class="method">
+                <div class="method-content">
+                  <span class="method-name">failingDataProvider</span>
+                  <span class="method-time"> 5 ms</span>
+                </div>
+              </div>
+              <div class="method">
+                <div class="method-content">
+                  <span class="method-name">duplicateDataProviders</span>
+                  <span class="method-time"> 6 ms</span>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-    <div class="test passed">
-      <span class="test-name">YAML</span>
-      <a href="#" class="expand">
-        <img src="up.png"/>
-      </a>
-      <div class="test-content">
-        <div class="class">
-          <div class="class-header">
-            <img src="passed.png"/>
-            <span class="class-name">test.yaml.YamlTest</span>
+          <div class="class">
+            <div class="class-header">
+              <img src="passed.png"/>
+              <span class="class-name">test.dataprovider.FailingIterableDataProviderTest</span>
+            </div>
+            <div class="class-content">
+              <div class="method">
+                <div class="method-content">
+                  <span class="method-name">failingDataProvider</span>
+                  <span class="method-time"> 8 ms</span>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="class-content">
-            <div class="method">
-              <div class="method-content">
-                <span class="method-name">compareFiles</span>
-                <span class="parameters">(a3)</span>
-                <span class="method-time"> 357 ms</span>
-              </div>
+          <div class="class">
+            <div class="class-header">
+              <img src="passed.png"/>
+              <span class="class-name">test.dataprovider.TestContextTest</span>
             </div>
-            <div class="method">
-              <div class="method-content">
-                <span class="method-name">compareFiles</span>
-                <span class="parameters">(a4)</span>
-                <span class="method-time"> 544 ms</span>
+            <div class="class-content">
+              <div class="method">
+                <div class="method-content">
+                  <span class="method-name">verifyTen</span>
+                  <span class="method-time"> 23 ms</span>
+                </div>
               </div>
-            </div>
-            <div class="method">
-              <div class="method-content">
-                <span class="method-name">compareFiles</span>
-                <span class="parameters">(a1)</span>
-                <span class="method-time"> 403 ms</span>
+              <div class="method">
+                <div class="method-content">
+                  <span class="method-name">verifyFive</span>
+                  <span class="method-time"> 41 ms</span>
+                </div>
               </div>
-            </div>
-            <div class="method">
-              <div class="method-content">
-                <span class="method-name">compareFiles</span>
-                <span class="parameters">(a2)</span>
-                <span class="method-time"> 183 ms</span>
+              <div class="method">
+                <div class="method-content">
+                  <span class="method-name">verifySix</span>
+                  <span class="method-time"> 43 ms</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+      <div class="test passed">
+        <div class="test-name">
+YAML          <a href="#" class="expand">
+            <img src="up.png"/>
+          </a>
+        </div>
+        <div class="test-content">
+          <div class="class">
+            <div class="class-header">
+              <img src="passed.png"/>
+              <span class="class-name">test.yaml.YamlTest</span>
+            </div>
+            <div class="class-content">
+              <div class="method">
+                <div class="method-content">
+                  <span class="method-name">compareFiles</span>
+                  <span class="parameters">(a3)</span>
+                  <span class="method-time"> 46 ms</span>
+                </div>
+              </div>
+              <div class="method">
+                <div class="method-content">
+                  <span class="method-name">compareFiles</span>
+                  <span class="parameters">(a4)</span>
+                  <span class="method-time"> 21 ms</span>
+                </div>
+              </div>
+              <div class="method">
+                <div class="method-content">
+                  <span class="method-name">compareFiles</span>
+                  <span class="parameters">(a2)</span>
+                  <span class="method-time"> 100 ms</span>
+                </div>
+              </div>
+              <div class="method">
+                <div class="method-content">
+                  <span class="method-name">compareFiles</span>
+                  <span class="parameters">(a1)</span>
+                  <span class="method-time"> 125 ms</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
   </div> <!-- suites -->

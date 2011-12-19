@@ -12,6 +12,7 @@ a:hover {
     border-type: solid;
     border-width: 1px;
     margin-top: 10px;
+    text-align: center;
 }
 
 .result-banner.failed {
@@ -35,13 +36,19 @@ a:hover {
 }
 
 .suite-name {
-    font-weight: bold;
-    font-size: 25px;
+    font-size: 40px;
     font-family: Times;
 }
 
+.suite-header {
+    border-type: dotted;
+    border-width: 1px;
+    width: 300px;
+}
+
 .suite-content {
-    margin-left: 20px;
+    width: 80%;
+    float: right;
 }
 
 .test {
@@ -52,10 +59,10 @@ a:hover {
 
 .test-name {
     font-size: 20px;
+    text-align: center;
 }
 
 .test-content {
-    margin-left: 20px;
 }
 
 .class {
@@ -124,4 +131,8 @@ a:hover {
 
 img .down {
     src: url("down.png");
+}
+
+.stats {
+    font: 12px 'Lucida Grande';
 }

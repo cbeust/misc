@@ -27,7 +27,7 @@
               }
               $(this).removeAttr('class');
               $(this).attr('class', 'up');
-              $(this).next().toggle();
+              $(this).parent().next().toggle();
               return false;
           });
 });
