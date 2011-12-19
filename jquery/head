@@ -18,8 +18,10 @@
 
           // Clicking on a test toggles its content
           $('a .test-name').click(function() {
-              $(this).parent().parent().next().toggle();
+              $(this).parent().next().toggle();
           });
 });
 </script>
 </head>
+
+<body>

@@ -1,3 +1,47 @@
+.suite {
+    border-style: solid;
+    border-width: 1px 0px 0px 0px;
+    padding-bottom: 5px;
+}
+
+.suite-name {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+h4 {
+    font-weight: normal;  
+    line-height: 0.2;
+    padding-left: 20px;
+}
+
+.suite-content {
+    margin-left: 20px;
+}
+
+.test-name {
+    font-size: 25px;
+}
+
+.test-content {
+    margin-left: 20px;
+}
+
+.class-content {
+    margin-left: 20px;
+    padding-left: 5px;
+}
+
+.class-name {
+    background: #CCC;
+    font-size: 18px;
+}
+
+.method-content {
+    padding-left: 20px;
+    border-style: solid;
+    border-width: 0px 0px 0px 1px;
+}
 
 .failure .test-name {
     background: #F44;
@@ -11,31 +55,7 @@
     background: #4A4;
 }
 
-.class-name {
-    background: #CCC;
-}
-
 .exception {
     font-family: monospace;
 }
 
-h3 {
-    font-weight: normal;  
-    border-style: solid;
-    border-width: 1px 0px 0px 0px;
-    text-indent: 20px;
-}
-
-h4 {
-    font-weight: normal;  
-    line-height: 0.2;
-    text-indent: 40px;
-}
-
-.class-name {
-    text-indent: 60px;
-}
-
-.method-name {
-    text-indent: 80px;
-}
