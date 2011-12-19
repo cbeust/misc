@@ -14,11 +14,12 @@
           $('.test-content').hide();
 
           // But expand the failures
-          $('.failure .test-content').show()
+          $('.failed .test-content').show()
 
           // Clicking on a test toggles its content
           $('a .test-name').click(function() {
               $(this).parent().next().toggle();
+              return false;
           });
 });
 </script>
