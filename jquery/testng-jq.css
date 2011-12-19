@@ -44,6 +44,7 @@ a:hover {
     border-type: dotted;
     border-width: 1px;
     width: 300px;
+    position: fixed;
 }
 
 .suite-content {
