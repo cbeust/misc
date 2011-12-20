@@ -137,3 +137,8 @@ img .down {
 .stats {
     font: 12px 'Lucida Grande';
 }
+
+.suite-path {
+    font-size: 16px;
+    font-family: fixed;
+}

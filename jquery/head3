@@ -1,0 +1,39 @@
+<html>
+<head>
+<title>TestNG new reports</title>
+
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />  
+<script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+<!--
+<script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+-->
+
+    <script type="text/javascript">
+      $(function(){
+          // Hide all the test contents
+//          $('.test-content').hide();
+
+          // But expand the failures
+          $('.failed .test-content').show()
+
+          // Clicking on the arrow toggles its content
+          $('a.expand').click(function() {
+              var img = $(this).find('img');
+              var src = img.attr('src');
+              if (src == "down.png") {
+                  img.attr('src', 'up.png');
+              } else {
+                  img.attr('src', 'down.png');
+              }
+              $(this).removeAttr('class');
+              $(this).attr('class', 'up');
+              $(this).parent().next().toggle();
+              return false;
+          });
+});
+</script>
+</head>
+
+<body>
+  <div class="navigator-root">
+  </div>
